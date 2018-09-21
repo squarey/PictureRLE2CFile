@@ -30,129 +30,221 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.FileNameLabel = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.EditFileSelect = new System.Windows.Forms.TextBox();
+            this.PicPreview = new System.Windows.Forms.PictureBox();
+            this.ListboxCompress = new System.Windows.Forms.ListBox();
+            this.BtnSwitch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LablePixelFormat = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LabelPicSize = new System.Windows.Forms.Label();
+            this.BtnScan = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.EditSavePath = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LabelPicShowNotice = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.PicPreview)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 497);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 35);
             this.label1.TabIndex = 1;
-            this.label1.Text = "选择的文件:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "已选择文件:";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // FileNameLabel
+            // EditFileSelect
             // 
-            this.FileNameLabel.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.FileNameLabel.Location = new System.Drawing.Point(324, 500);
-            this.FileNameLabel.Name = "FileNameLabel";
-            this.FileNameLabel.Size = new System.Drawing.Size(223, 35);
-            this.FileNameLabel.TabIndex = 2;
-            this.FileNameLabel.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.EditFileSelect.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.EditFileSelect.Location = new System.Drawing.Point(175, 12);
+            this.EditFileSelect.Name = "EditFileSelect";
+            this.EditFileSelect.Size = new System.Drawing.Size(223, 35);
+            this.EditFileSelect.TabIndex = 2;
             // 
-            // menuStrip1
+            // PicPreview
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.文件ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(883, 33);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.PicPreview.Location = new System.Drawing.Point(-1, -1);
+            this.PicPreview.Name = "PicPreview";
+            this.PicPreview.Size = new System.Drawing.Size(450, 310);
+            this.PicPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicPreview.TabIndex = 4;
+            this.PicPreview.TabStop = false;
             // 
-            // 文件ToolStripMenuItem
+            // ListboxCompress
             // 
-            this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.打开ToolStripMenuItem,
-            this.另存为ToolStripMenuItem});
-            this.文件ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
-            this.文件ToolStripMenuItem.Text = "文件";
-            this.文件ToolStripMenuItem.Click += new System.EventHandler(this.文件ToolStripMenuItem_Click);
+            this.ListboxCompress.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ListboxCompress.FormattingEnabled = true;
+            this.ListboxCompress.ItemHeight = 25;
+            this.ListboxCompress.Items.AddRange(new object[] {
+            "RGB565 RLE压缩",
+            "BGR565 RLE压缩",
+            "RGB565 BMP",
+            "BGR565 BMP"});
+            this.ListboxCompress.Location = new System.Drawing.Point(563, 47);
+            this.ListboxCompress.Name = "ListboxCompress";
+            this.ListboxCompress.Size = new System.Drawing.Size(246, 129);
+            this.ListboxCompress.TabIndex = 5;
             // 
-            // 打开ToolStripMenuItem
+            // BtnSwitch
             // 
-            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(141, 30);
-            this.打开ToolStripMenuItem.Text = "打开";
-            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
+            this.BtnSwitch.AutoSize = true;
+            this.BtnSwitch.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnSwitch.Location = new System.Drawing.Point(571, 288);
+            this.BtnSwitch.Name = "BtnSwitch";
+            this.BtnSwitch.Size = new System.Drawing.Size(116, 35);
+            this.BtnSwitch.TabIndex = 6;
+            this.BtnSwitch.Text = "转换";
+            this.BtnSwitch.UseVisualStyleBackColor = true;
+            this.BtnSwitch.Click += new System.EventHandler(this.BtnSwitch_Click);
             // 
-            // 另存为ToolStripMenuItem
+            // label2
             // 
-            this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(141, 30);
-            this.另存为ToolStripMenuItem.Text = "另存为";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(557, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 35);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "压缩方式:";
             // 
-            // pictureBox1
+            // label3
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(18, 99);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 188);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(557, 237);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 35);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "像素格式:";
             // 
-            // listBox1
+            // LablePixelFormat
             // 
-            this.listBox1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Items.AddRange(new object[] {
-            "RGB565 SW  Compress",
-            "RGB565  Compress"});
-            this.listBox1.Location = new System.Drawing.Point(603, 80);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(246, 129);
-            this.listBox1.TabIndex = 5;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.LablePixelFormat.AutoSize = true;
+            this.LablePixelFormat.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LablePixelFormat.Location = new System.Drawing.Point(687, 237);
+            this.LablePixelFormat.Name = "LablePixelFormat";
+            this.LablePixelFormat.Size = new System.Drawing.Size(51, 35);
+            this.LablePixelFormat.TabIndex = 9;
+            this.LablePixelFormat.Text = "---";
             // 
-            // button1
+            // label5
             // 
-            this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(666, 497);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 35);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "转换";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(18, 92);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 35);
+            this.label5.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(557, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 35);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "大      小:";
+            // 
+            // LabelPicSize
+            // 
+            this.LabelPicSize.AutoSize = true;
+            this.LabelPicSize.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelPicSize.Location = new System.Drawing.Point(687, 189);
+            this.LabelPicSize.Name = "LabelPicSize";
+            this.LabelPicSize.Size = new System.Drawing.Size(51, 35);
+            this.LabelPicSize.TabIndex = 12;
+            this.LabelPicSize.Text = "---";
+            // 
+            // BtnScan
+            // 
+            this.BtnScan.AutoSize = true;
+            this.BtnScan.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnScan.Location = new System.Drawing.Point(413, 12);
+            this.BtnScan.Name = "BtnScan";
+            this.BtnScan.Size = new System.Drawing.Size(75, 35);
+            this.BtnScan.TabIndex = 13;
+            this.BtnScan.Text = "浏览";
+            this.BtnScan.UseVisualStyleBackColor = true;
+            this.BtnScan.Click += new System.EventHandler(this.BtnScan_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(12, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(184, 35);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "文件保存路径:";
+            // 
+            // EditSavePath
+            // 
+            this.EditSavePath.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.EditSavePath.Location = new System.Drawing.Point(202, 60);
+            this.EditSavePath.Name = "EditSavePath";
+            this.EditSavePath.Size = new System.Drawing.Size(286, 35);
+            this.EditSavePath.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.LabelPicShowNotice);
+            this.panel1.Controls.Add(this.PicPreview);
+            this.panel1.Location = new System.Drawing.Point(24, 101);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(450, 310);
+            this.panel1.TabIndex = 16;
+            // 
+            // LabelPicShowNotice
+            // 
+            this.LabelPicShowNotice.AutoSize = true;
+            this.LabelPicShowNotice.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPicShowNotice.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelPicShowNotice.Location = new System.Drawing.Point(114, 135);
+            this.LabelPicShowNotice.Name = "LabelPicShowNotice";
+            this.LabelPicShowNotice.Size = new System.Drawing.Size(195, 46);
+            this.LabelPicShowNotice.TabIndex = 0;
+            this.LabelPicShowNotice.Text = "图片预览区";
+            this.LabelPicShowNotice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 568);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.FileNameLabel);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(838, 442);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.EditSavePath);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.BtnScan);
+            this.Controls.Add(this.LabelPicSize);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.LablePixelFormat);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BtnSwitch);
+            this.Controls.Add(this.ListboxCompress);
+            this.Controls.Add(this.EditFileSelect);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicPreview)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,14 +253,21 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox FileNameLabel;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 另存为ToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox EditFileSelect;
+        private System.Windows.Forms.PictureBox PicPreview;
+        private System.Windows.Forms.ListBox ListboxCompress;
+        private System.Windows.Forms.Button BtnSwitch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LablePixelFormat;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LabelPicSize;
+        private System.Windows.Forms.Button BtnScan;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox EditSavePath;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LabelPicShowNotice;
     }
 }
 
